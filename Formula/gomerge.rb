@@ -6,20 +6,20 @@ class Gomerge < Formula
   desc "Gomerge is a tool to quickly merge several pull requests from your terminal. The intention of this tool is to simplfy, and eventually automate the merging of github pull requests. This tool should be able to run on most systems.
 "
   homepage "https://github.com/Cian911/gomerge"
-  version "2.2.1"
+  version "3.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/2.2.1/gomerge_2.2.1_Darwin_x86_64.tar.gz"
-      sha256 "6861872b89eabec879a5899602a9c8002d678d4d7d2c29280c07491bb29f51f1"
+      url "https://github.com/Cian911/gomerge/releases/download/3.0.0/gomerge_3.0.0_Darwin_x86_64.tar.gz"
+      sha256 "1c341b2821d36758cce38c2ea93b60cf7bbc748eb0f7f91cf468a2d610351a70"
 
       def install
         bin.install "gomerge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Cian911/gomerge/releases/download/2.2.1/gomerge_2.2.1_Darwin_arm64.tar.gz"
-      sha256 "3345f5a63fbe5ac040120916505ac1580c7a3e170a461430101023a31af12eee"
+      url "https://github.com/Cian911/gomerge/releases/download/3.0.0/gomerge_3.0.0_Darwin_arm64.tar.gz"
+      sha256 "e19434136fa702e1ae0a23067228849a9651c64a4d305c7fa113f678bf1e6351"
 
       def install
         bin.install "gomerge"
@@ -29,16 +29,16 @@ class Gomerge < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Cian911/gomerge/releases/download/2.2.1/gomerge_2.2.1_Linux_arm64.tar.gz"
-      sha256 "6d6f2128e6d1d9e46e2b746460d4ade54bbf3861ad82652ea981e31ab8f0d401"
+      url "https://github.com/Cian911/gomerge/releases/download/3.0.0/gomerge_3.0.0_Linux_arm64.tar.gz"
+      sha256 "40f4b33635dd943ea5f04b79f961b1cde33392548d5ae809fe27ffd58d549019"
 
       def install
         bin.install "gomerge"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/2.2.1/gomerge_2.2.1_Linux_x86_64.tar.gz"
-      sha256 "c62ed8b18db5ecbd8033bc2f3b051468827b914f9d85746ca1e49dfcd7f53c3c"
+      url "https://github.com/Cian911/gomerge/releases/download/3.0.0/gomerge_3.0.0_Linux_x86_64.tar.gz"
+      sha256 "1ebeea3111f3ac728c8af71fbdc3965ae8effe31436b340b7a6fb784cc3b35a8"
 
       def install
         bin.install "gomerge"
