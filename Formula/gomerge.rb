@@ -6,20 +6,20 @@ class Gomerge < Formula
   desc "Gomerge is a tool to quickly merge several pull requests from your terminal. The intention of this tool is to simplfy, and eventually automate the merging of github pull requests. This tool should be able to run on most systems.
 "
   homepage "https://github.com/Cian911/gomerge"
-  version "3.2.1"
+  version "3.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/3.2.1/gomerge_3.2.1_Darwin_x86_64.tar.gz"
-      sha256 "a9f13b87813ba744f8385c91db89bf4d932b3a6b1da05509a213e0aa373ca24d"
+    if Hardware::CPU.arm?
+      url "https://github.com/Cian911/gomerge/releases/download/3.3.0/gomerge_3.3.0_darwin_arm64.tar.gz"
+      sha256 "4cd23c0615c13f5bec2a640688823b53ce152b1ae5fb2dc0e1c282711e7a5846"
 
       def install
         bin.install "gomerge"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Cian911/gomerge/releases/download/3.2.1/gomerge_3.2.1_Darwin_arm64.tar.gz"
-      sha256 "766574974c852688bf73c59246e5982b40b8ef7dfa529291fd29fcea6010edff"
+    if Hardware::CPU.intel?
+      url "https://github.com/Cian911/gomerge/releases/download/3.3.0/gomerge_3.3.0_darwin_amd64.tar.gz"
+      sha256 "450ac60b6b5e023807095773d1dd52e2fb3d8dbe47d751f95312b2c234846d7a"
 
       def install
         bin.install "gomerge"
@@ -29,24 +29,24 @@ class Gomerge < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Cian911/gomerge/releases/download/3.2.1/gomerge_3.2.1_Linux_armv6.tar.gz"
-      sha256 "63f820175d34dfd3bd4a05cc553d9e483126c6e62797d5af57ac32c753060610"
-
-      def install
-        bin.install "gomerge"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Cian911/gomerge/releases/download/3.2.1/gomerge_3.2.1_Linux_arm64.tar.gz"
-      sha256 "4b5f6189816be29c08eda26b2e09e46b40612dddfc4a38183f5f228cce221651"
+      url "https://github.com/Cian911/gomerge/releases/download/3.3.0/gomerge_3.3.0_linux_armv6.tar.gz"
+      sha256 "3a52d831cd3d5328945e003dc281f0d62c49a1f34063cf3f5a8af1d7ffc92535"
 
       def install
         bin.install "gomerge"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/3.2.1/gomerge_3.2.1_Linux_x86_64.tar.gz"
-      sha256 "a92414142ffe797662f14ac59a33fd907849c8c697ce68ede4e89dcc9a8fcb27"
+      url "https://github.com/Cian911/gomerge/releases/download/3.3.0/gomerge_3.3.0_linux_amd64.tar.gz"
+      sha256 "eacca9f3572fe769e041d880b8a6031ca46655fda938673bda51439e0339c3e2"
+
+      def install
+        bin.install "gomerge"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Cian911/gomerge/releases/download/3.3.0/gomerge_3.3.0_linux_arm64.tar.gz"
+      sha256 "d7c0d9d5eb4e5a364ffd5b129f5c62a95e3eb83ef71250f91a228d6f556658ea"
 
       def install
         bin.install "gomerge"
